@@ -1,0 +1,79 @@
+/* App.css */
+
+/* Navigation styles */
+nav {
+  margin: 5px;
+  margin-top: 40px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: black; /* Default color for all items */
+  padding: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+/* Styling for "All" when it's active */
+nav li a.active {
+  color: green; /* Active color for "All" */
+  border-bottom: 3px solid green; /* Green line below the active item */
+}
+
+nav li a.active:hover {
+  color: green; /* Active color for "All" */
+  border-bottom: 3px solid green; /* Green line below the active item */
+}
+
+nav li a:hover{
+  color: grey;
+}
+.box {
+  width: 18rem;
+  height: 18rem;
+  background-color: rgb(81, 79, 79);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px; /* Add margin to create space between boxes */
+}
+
+.container {
+  display: grid; /* Change from flex to grid */
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr)); /* Use auto-fill to create a flexible grid, minmax for responsive columns */
+  gap: 20px; /* Add gap between grid items */
+  margin: 50px;
+  
+}
+
+.line{
+  width: 90%;
+  height: 2px;
+  background-color: rgb(169, 168, 168);
+  margin-top: 45px;
+  margin-left: 85px;
+}
+@media screen and (max-width: 1260px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr)); /* Adjust column width for smaller screens */
+  }
+}
+
+
+@media screen and (max-width: 675px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Adjust column width for even smaller screens */
+  }
+}
